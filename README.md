@@ -8,13 +8,15 @@ Die Züge werden automatisch abgerufen - nur Stationsnummer eingeben und ab die 
 Zeitanzeige wie am Bahnhof
 - **IBNR in die index.html eintragen**: Die Zugdaten werden automatisch abgerufen
 - # NEU
-- **Automatisches Generieren mithilfe der IBNR:** Der Generator wurde von mir so modifiziert, das bei Eingabe eines einr IBNR automatisch die Anzeige generiert wird. Das heißt wenn die richtige IBNR eingetragen ist (<a href="[www.michaeldittrich.de/ibnr/online.php]">IBNR Verzeichnis</a>) sollte automatisch die Anzeige des zb. Ahauser Bahnhofs (IBNR 8000437) erscheinen.
-Das ermöglicht vielseitige Einsatzmöglichkeiten für den atomatischen Generator, z. B. zum einbinden in (<a href="https://github.com/bastilimbach/docker-MagicMirror">MagicMirror2</a> als Info-Anzeige.
+- **Automatisches Generieren mithilfe der IBNR:** Der Generator wurde so modifiziert, das die IBNR automatisch angezeigt bzw. generiert wird.
+Das heißt IBNR eingetragen (<a href="[www.michaeldittrich.de/ibnr/online.php]">IBNR Verzeichnis</a>) und schon wird automatisch die Anzeige des zb. Ahauser Bahnhofs (IBNR 8000437) erscheinen.
+Das ermöglicht vielseitige Einsatzmöglichkeiten für den atomatischen Generator, z. B. zum einbinden in (<a href="https://github.com/bastilimbach/docker-MagicMirror">MagicMirror2</a> als Info-Anzeiger.
 
 Configuration:
-
-```bash
 Öffne die Index.html zum bearbeiten
-Suche die Zeile: 
-                <input type="text" id="ibIBNR" value="8003529"> //Ersetze den value Wert durch deine "IBNR"
+Suche die Zeile:
+```bash
+ value="8003529"
+Ersetze 8003529 mit deiner IBNR
+Vollständige Zeile: <input type="text" id="ibIBNR" value="8003529"> //Ersetze den value Wert durch deine "IBNR"
 SPEICHERN - Fertig
