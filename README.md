@@ -1,9 +1,20 @@
 # Automatischer Zugzielanzeigengenerator + Zeitanzeigetafel
 Web-App zum automatischen Generieren von Zugzielanzeigern . und Uhrzeit.
 <img src="https://raw.githubusercontent.com/da-ssl/Zugzielanzeigengenerator/main/img/preview.png" alt="Vorschau des Generators" width="545"/>
+<img src="[https://github.com/Issy-Meow/Automatischer-Zugzielanzeigengenerator/blob/main/img/Zeitanzeiger.png" alt="Vorschau des Generators" width="100%"/>
 ## Features:
-Der Zugzielanzeigengenerator kann einen S-Bahn-Anzeiger simulieren, wie er unter anderem auf der S-Bahn München verbaut ist. Die Züge und ihre Daten können entweder manuell eingegeben oder automatisch abgerufen werden - nur Stationsnummer eingeben und ab die Post.
-## Geplante Features:
-Der Generator steht noch ganz am Anfang und ist aktuell noch nicht wirklich zeigenswert. Auch wenn er erste Anzeigen darstellen kann, ist die Flexibilität sehr beschränkt. Hier sind Planungen für die Zukunft:
-- **Daten in Eingabefelder eintragen**: Wenn Zugdaten automatisch abgerufen wurden, sollten sie in die Eingabefelder automatisch eingetragen werden, damit die Daten im Nachhinein manuell verändert werden können
-- **Automatisches Generieren mithilfe von URI-Parametern:** In Zukunft soll der Generator bei Eingabe eines URLs automatisch die Anzeige generieren. Das heißt bei eingabe der URL example.com/zzagenerator?station=8000105&ce=off sollte automatisch die Anzeige des Frankfurter Hbfs (IBNR 8000105) erscheinen und die Kontrollelemente ausgeblendet werden, sodass wirklich nur die Anzeige zu sehen ist. Das ermöglicht vielseitige Einsatzmöglichkeiten für den Generator, z. B. für Stellwerkssimulationen oder Info-Screens.
+Der automatische Zugzielanzeigengenerator kann einen S-Bahn-Anzeiger simulieren, wie er unter anderem auf der S-Bahn München verbaut ist. 
+Die Züge werden automatisch abgerufen - nur Stationsnummer eingeben und ab die Post.
+Zeitanzeige wie am Bahnhof
+- **IBNR in die index.html eintragen**: Die Zugdaten werden automatisch abgerufen
+- # NEU
+- **Automatisches Generieren mithilfe der IBNR:** Der Generator wurde von mir so modifiziert, das bei Eingabe eines einr IBNR automatisch die Anzeige generiert wird. Das heißt wenn die richtige IBNR eingetragen ist (<a href="[www.michaeldittrich.de/ibnr/online.php]">IBNR Verzeichnis</a>) sollte automatisch die Anzeige des zb. Ahauser Bahnhofs (IBNR 8000437) erscheinen.
+Das ermöglicht vielseitige Einsatzmöglichkeiten für den atomatischen Generator, z. B. zum einbinden in (<a href="[https://github.com/bastilimbach/docker-MagicMirror]">MagicMirror2</a> als Info-Anzeige.
+
+Configuration:
+
+```bash
+Öffne die Index.html zum bearbeiten
+Suche die Zeile: 
+                <input type="text" id="ibIBNR" value="8003529"> //Ersetze den value Wert durch deine "IBNR"
+SPEICHERN - Fertig
