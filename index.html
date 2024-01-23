@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/01.css">
+    <link rel="icon" type="image/png" sizes="75x75" href="img/S-Bahn-Logo_75_neu">
+    <meta http-equiv="refresh" content="60">
+    <script src="js/bowser.js"></script>
+</head>
+<body bgcolor=#000000 text=#F8F8FF link=#F8F8FF vlink=#F8F8FF alink=#F8F8FF>
+<body>
+
+<div class="inhalt he">       
+        <div id="zza-01" style="margin-top:30px">
+            <img id="hintergrund01" src="img/01.png">
+            <canvas	id="text01" width="4000" height="1640">Ihr Browser unterstüzt keine Canvas. Bitte stellen Sie sicher, dass JavaScript aktiviert ist, und dass Sie einen aktuellen Browser, wie z.B. Mozilla Firefox, verwenden.</canvas>
+            <img id="overlay01" src="img/01-overlay.png">
+        </div>
+        
+
+
+        <div id="eingabemaske he">
+            <input type="radio" name="datasource" value="manual" id="manual"> <label for="manual"></label>
+            <div class="zugdaten-eingabe" id="zug1">
+                
+                
+                <b>Zug 1:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                Ziel: <input type="text" placeholder="Hagen Hbf" id="ibZug1ziel">
+                    <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
+                    Linie: 
+                    <select id="ibZug1linie">
+                        <optgroup label="S-Bahnen">
+                            <option>S1</option> <option>S2</option> <option>S3</option> <option>S4</option>
+                            <option>S6</option> <option>S7</option> <option>S8</option> 
+                        </optgroup>
+                        <optgroup label="Regionalzüge">
+                            <option>RB</option> <option>RE</option>
+                        </optgroup>
+                        <optgroup label="InterCity">
+                            <option>IC</option> <option>ICE</option>
+                        </optgroup>
+                    </select>
+                    Gleis: <input type="text" placeholder="11" id="ibZug1gleis"size="4">
+                    Belegung: <select id="ibZug1ws" style="font-family:lcdzza10px;"><option>¹</option> <option>²</option> <option>³</option></select>
+                    in Minuten: <input type="text" id="ibZug1min" size="3">
+            </div>
+
+            <div class="zugdaten-eingabe" id="zug2">
+                <b>Zug 2:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                Ziel: <input type="text" placeholder="Haltern am See" id="ibZug2ziel">
+                <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
+                Linie: 
+                <select id="ibZug2linie"> <option>--</option>
+                    <optgroup label="S-Bahnen">
+                        <option>S1</option> <option>S2</option> <option>S3</option> <option>S4</option>
+                        <option>S6</option> <option>S7</option> <option>S8</option> 
+                    </optgroup>
+                    <optgroup label="Regionalzüge">
+                        <option>RB</option> <option>RE</option>
+                    </optgroup>
+                    <optgroup label="InterCity">
+                        <option>IC</option> <option>ICE</option>
+                    </optgroup>
+                </select>
+                Gleis: <input type="text" placeholder="2" id="ibZug2gleis"size="4">
+                Belegung: <select id="ibZug2ws" style="font-family:lcdzza10px;"><option>¹</option> <option>²</option> <option>³</option></select>
+                in Minuten: <input type="text" id="ibZug2min" size="3">
+            </div>
+
+            <div class="zugdaten-eingabe" id="zug3">
+                <b>Zug 3:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                Ziel: <input type="text" placeholder="Frankfurt Hbf" id="ibZug3ziel">
+                <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
+                Linie:
+                <select id="ibZug3linie"> <option>--</option>
+                    <optgroup label="S-Bahnen">
+                        <option>S1</option> <option>S2</option> <option>S3</option> <option>S4</option>
+                        <option>S6</option> <option>S7</option> <option>S8</option> 
+                    </optgroup>
+                    <optgroup label="Regionalzüge">
+                        <option>RB</option> <option>RE</option>
+                    </optgroup>
+                    <optgroup label="InterCity">
+                        <option>IC</option> <option>ICE</option>
+                    </optgroup>
+                </select>
+                Gleis: <input type="text" placeholder="11" id="ibZug3gleis"size="4">
+                Belegung: <select id="ibZug3ws" style="font-family:lcdzza10px;"><option>¹</option> <option>²</option> <option>³</option></select>
+                in Minuten: <input type="text" id="ibZug3min" size="3">
+            </div>
+
+            <div id="zug4">
+                <b>Zug 4:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                Ziel: <input type="text" placeholder="Frankfurt Hbf" id="ibZug4ziel">
+                <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
+                Linie:
+                <select id="ibZug4linie"> <option>--</option>
+                    <optgroup label="S-Bahnen">
+                        <option>S1</option> <option>S2</option> <option>S3</option> <option>S4</option>
+                        <option>S6</option> <option>S7</option> <option>S8</option> 
+                    </optgroup>
+                    <optgroup label="Regionalzüge">
+                        <option>RB</option> <option>RE</option>
+                    </optgroup>
+                    <optgroup label="InterCity">
+                        <option>IC</option> <option>ICE</option>
+                    </optgroup>
+                </select>
+                Gleis: <input type="text" placeholder="11" id="ibZug4gleis" size="4">
+                Belegung: <select id="ibZug4ws" style="font-family:lcdzza10px;"><option>¹</option> <option>²</option> <option>³</option></select>
+                in Minuten: <input type="text" id="ibZug4min" size="3">
+            </div> <br>
+
+<script>
+  window.onload = function() {
+    document.getElementById('auto').checked = true;
+  };
+</script>
+
+            <input type="radio" name="datasource" value="auto" id="auto" checked='checked'> 
+            <label for="auto" checked='checked'>Daten werden alle 60 Sek. automatisch abrufen</label>
+            <input type="text" id="ibIBNR" value="8003529">
+            <button id="studyOne"  type="button" onclick="apirequest(4);">Aktualisiert</button>
+            <img src="img/loading.gif" id="loading_gif" style="height:16px;padding-top: 1px;padding-bottom: 1px; visibility: hidden;">
+            <br><br>
+           <h2 style="margin-top: 20px;">IBNR Vorgabe: Langenberg Bahnhof (8003529)</h2>
+            <a href="[www.michaeldittrich.de/ibnr/online.php]">IBNR Verzeichnis</a>
+        </div>
+    </div>
+    <script src="js/bowser.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bowser.js"></script>
+
+    <script>
+    document.getElementById("studyOne").click();
+    $("#studyOne").trigger('click');
+    </script>
+
+</body>
+<footer>
+
+</footer>
+</html>
