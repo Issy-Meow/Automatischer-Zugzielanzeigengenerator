@@ -13,10 +13,9 @@ Das heißt IBNR eingetragen (<a href="[www.michaeldittrich.de/ibnr/online.php]">
 Das ermöglicht vielseitige Einsatzmöglichkeiten für den atomatischen Generator, z. B. zum einbinden in (<a href="https://github.com/bastilimbach/docker-MagicMirror">MagicMirror2</a> als Info-Anzeiger.
 
 Configuration:
-Öffne die Index.html zum bearbeiten
-Suche die Zeile:
+Öffne die Index.html zum bearbeiten & suche die Zeile und ersetze die IBNR durch deine IBNR. Speichern NICHT vergessen ;)
 ```bash
  value="8003529"
-Ersetze 8003529 mit deiner IBNR
-Vollständige Zeile: <input type="text" id="ibIBNR" value="8003529"> //Ersetze den value Wert durch deine "IBNR"
-SPEICHERN - Fertig
+
+//Vollständige Zeile: 
+<input type="text" id="ibIBNR" value="8003529"> //Ersetze den value Wert durch deine "IBNR"
