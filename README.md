@@ -1,7 +1,7 @@
 # Automatischer Zugzielanzeigengenerator + Zeitanzeigetafel
 Web-App zum automatischen Generieren von Zugzielanzeigern . und Uhrzeit.
 <img src="https://raw.githubusercontent.com/da-ssl/Zugzielanzeigengenerator/main/img/preview.png" alt="Vorschau des Generators" width="545"/>
-<img src="https://github.com/Issy-Meow/Automatischer-Zugzielanzeigengenerator/blob/main/img/Zeitanzeiger.png" alt="Vorschau des Generators" width="100%"/>
+<img src="https://github.com/Issy-Meow/Automatischer-Zugzielanzeigengenerator/blob/main/img/Zeitanzeiger.png" alt="Vorschau des Generators" width="545%"/>
 ## Features:
 Der automatische Zugzielanzeigengenerator kann einen S-Bahn-Anzeiger simulieren, wie er unter anderem auf der S-Bahn München verbaut ist. 
 Die Züge werden automatisch abgerufen - nur Stationsnummer eingeben und ab die Post.
