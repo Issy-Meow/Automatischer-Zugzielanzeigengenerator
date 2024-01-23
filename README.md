@@ -1,5 +1,5 @@
 # Automatischer Zugzielanzeigengenerator + Zeitanzeigetafel
-Web-App zum automatischen Generieren von Zugzielanzeigern . und Uhrzeit.
+Web-App zum automatischen Generieren von Zugzielanzeigern und Uhrzeit
 <img src="https://github.com/Issy-Meow/Automatischer-Zugzielanzeigengenerator/blob/main/img/AutomatischerZugzeilenanzeiger.png" alt="Vorschau des Generators" width="545"/>
 <img src="https://github.com/Issy-Meow/Automatischer-Zugzielanzeigengenerator/blob/main/img/Zeitanzeiger.png" alt="Vorschau des Generators" width="545"/>
 ## Features:
