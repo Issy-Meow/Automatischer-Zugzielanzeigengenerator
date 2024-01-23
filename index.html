@@ -1,30 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-Bahn-Zugzielanzeiger</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/01.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="75x75" href="img/S-Bahn-Logo_75_neu">
+    <meta http-equiv="refresh" content="60"> //Lädt die Seite alle 60 Sek. neu
     <script src="js/bowser.js"></script>
 </head>
-
+<body bgcolor=#000000 text=#F8F8FF link=#F8F8FF vlink=#F8F8FF alink=#F8F8FF>
 <body>
-    <div id="header" style="height:120px;">
-        <img src="img/header.png" width="1000" id="headerbg" >
-        <a href="index.html"><img src="img/logo.png" id="headerlogo"></a>
-        <div id="navbar">Start  Generatoren  Über</div>
-    </div>
 
-    
-    <div class="inhalt he">
-        <h1>S-Bahn-Zugzielanzeiger.</h1>
-        <h2 style="border-bottom: 0px !important;">Einfach, zweifarbig</h2>
-        
+<div class="inhalt he">       
         <div id="zza-01" style="margin-top:30px">
             <img id="hintergrund01" src="img/01.png">
             <canvas	id="text01" width="4000" height="1640">Ihr Browser unterstüzt keine Canvas. Bitte stellen Sie sicher, dass JavaScript aktiviert ist, und dass Sie einen aktuellen Browser, wie z.B. Mozilla Firefox, verwenden.</canvas>
@@ -34,13 +23,12 @@
 
 
         <div id="eingabemaske he">
-            <h1>Manuelles Eingeben der Daten:</h1>
-            <input type="radio" name="datasource" value="manual" id="manual"> <label for="manual">Daten manuell eingeben:</label>
+            <input type="radio" name="datasource" value="manual" id="manual"> <label for="manual"></label>
             <div class="zugdaten-eingabe" id="zug1">
                 
                 
                 <b>Zug 1:</b>&nbsp;&nbsp;&nbsp;&nbsp;
-                Ziel: <input type="text" placeholder="Frankfurt Hbf" id="ibZug1ziel">
+                Ziel: <input type="text" placeholder="Hagen Hbf" id="ibZug1ziel">
                     <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
                     Linie: 
                     <select id="ibZug1linie">
@@ -62,7 +50,8 @@
 
             <div class="zugdaten-eingabe" id="zug2">
                 <b>Zug 2:</b>&nbsp;&nbsp;&nbsp;&nbsp;
-                Ziel: <input type="text" placeholder="Frankfurt Hbf" id="ibZug2ziel">
+                Ziel: <input type="text" placeholder="Haltern am See" id="ibZug2ziel">
+                <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
                 Linie: 
                 <select id="ibZug2linie"> <option>--</option>
                     <optgroup label="S-Bahnen">
@@ -76,7 +65,7 @@
                         <option>IC</option> <option>ICE</option>
                     </optgroup>
                 </select>
-                Gleis: <input type="text" placeholder="11" id="ibZug2gleis"size="4">
+                Gleis: <input type="text" placeholder="2" id="ibZug2gleis"size="4">
                 Belegung: <select id="ibZug2ws" style="font-family:lcdzza10px;"><option>¹</option> <option>²</option> <option>³</option></select>
                 in Minuten: <input type="text" id="ibZug2min" size="3">
             </div>
@@ -84,6 +73,7 @@
             <div class="zugdaten-eingabe" id="zug3">
                 <b>Zug 3:</b>&nbsp;&nbsp;&nbsp;&nbsp;
                 Ziel: <input type="text" placeholder="Frankfurt Hbf" id="ibZug3ziel">
+                <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
                 Linie:
                 <select id="ibZug3linie"> <option>--</option>
                     <optgroup label="S-Bahnen">
@@ -105,6 +95,7 @@
             <div id="zug4">
                 <b>Zug 4:</b>&nbsp;&nbsp;&nbsp;&nbsp;
                 Ziel: <input type="text" placeholder="Frankfurt Hbf" id="ibZug4ziel">
+                <!--Linie: <input type="text" placeholder="3" id="ibZug1linie" maxlength="1" size="1">-->
                 Linie:
                 <select id="ibZug4linie"> <option>--</option>
                     <optgroup label="S-Bahnen">
@@ -122,54 +113,33 @@
                 Belegung: <select id="ibZug4ws" style="font-family:lcdzza10px;"><option>¹</option> <option>²</option> <option>³</option></select>
                 in Minuten: <input type="text" id="ibZug4min" size="3">
             </div> <br>
-            <input type="checkbox" id="lauftextletztezeile" value="no"> Hinweislauftext:
-            <input type="text" id="ibZug4lauftext" size="111" placeholder="Achtung Zugbetrieb! Halten Sie Abstand von der Bahnsteigkante und betreten Sie den gekennzeichneten Bereich erst nach Halt des Zuges.">
-            <br><br>
-            <button type="button" onclick="Eingabe();">Eingabe</button>
-            <button type="button" onclick="leeren();">Leeren</button>
-            <button type="button" onclick="switchAnimations();">Animationen an/aus</button>
-            <button type="button" onclick="laufschrift('Beispiellauftext', 672);">Lauftext-Debug</button>
-            <br><br>
-            <input type="radio" name="datasource" value="auto" id="auto"> <label for="auto">Daten automatisch abrufen:</label>
-            <input type="text" id="ibIBNR" placeholder="8000105">
-            <button type="button" onclick="apirequest(4);">Daten abrufen</button>
+
+<script>
+  window.onload = function() {
+    document.getElementById('auto').checked = true;
+  };
+</script>
+
+            <input type="radio" name="datasource" value="auto" id="auto" checked='checked'> 
+            <label for="auto" checked='checked'>Daten werden alle 60 Sek. automatisch abrufen</label>
+            <input type="text" id="ibIBNR" value="8003529"> //Ersetze den value Wert durch deine "IBNR"
+            <button id="studyOne"  type="button" onclick="apirequest(4);">Aktualisiert</button>
             <img src="img/loading.gif" id="loading_gif" style="height:16px;padding-top: 1px;padding-bottom: 1px; visibility: hidden;">
             <br><br>
-            <button type="button" onclick="api_request(4);">Daten abrufen (Neu)</button>
-           <!--<button type="button" onclick="nextstation();">Suche näheste Station...</button>--> 
-           <h2 style="margin-top: 20px;">Wichtige IBNRs:</h2>
-           <table>
-                <tr>
-                    <th>München Hbf<br></th>
-                    <th>8000261</th>
-                </tr>
-                <tr>
-                    <td>Berlin Hbf (S-Bahn)</td>
-                    <td>8089021</td>
-                </tr>
-                <tr>
-                    <td>Frankfurt Hbf</td>
-                    <td>8000105</td>
-                </tr>
-                <tr>
-                    <td>Hamburg Hbf<br></td>
-                    <td>8098549</td>
-                </tr>
-                <tr>
-                    <td>Köln Hbf<br></td>
-                    <td>8000207</td>
-                </tr>
-            </table>
+           <h2 style="margin-top: 20px;">IBNR Vorgabe: Langenberg Bahnhof (8003529)</h2> //IBNR Verzeichniss: www.michaeldittrich.de/ibnr/online.php
         </div>
     </div>
     <script src="js/bowser.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bowser.js"></script>
+
+    <script>
+    document.getElementById("studyOne").click();
+    $("#studyOne").trigger('click');
+    </script>
+
 </body>
 <footer>
-    <div class="footer">
-        Optimale Anzeige mit <a href="https://firefox.com">Mozilla Firefox</a>. ¹²³
-    </div>
-    
+
 </footer>
 </html>
